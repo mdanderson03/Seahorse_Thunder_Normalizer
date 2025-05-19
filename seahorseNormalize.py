@@ -43,8 +43,8 @@ def well_cell_counter(experiment_directory):
                 labels, _ = model.predict_instances(normalize(img))
                 cell_count = np.max(labels)
                 max_row = ws.max_row
-                ws.cell(row=max_row+1, column=1).value = cell_count
-                ws.cell(row=max_row + 1, column=2).value = columns[column] + str(rows[row])
+                ws.cell(row=max_row+1, column=2).value = cell_count
+                ws.cell(row=max_row + 1, column=1).value = columns[column] + str(rows[row])
 
                 #save labelled image in folder
                 os.chdir(labelled_directory)
