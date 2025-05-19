@@ -44,7 +44,7 @@ def well_cell_counter(experiment_directory):
                 cell_count = np.max(labels)
                 max_row = ws.max_row
                 ws.cell(row=max_row+1, column=1).value = cell_count
-                ws.cell(row=max_row + 1, column=0).value = columns[column] + str(rows[row])
+                ws.cell(row=max_row + 1, column=2).value = columns[column] + str(rows[row])
 
                 #save labelled image in folder
                 os.chdir(labelled_directory)
